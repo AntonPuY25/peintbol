@@ -1,0 +1,14 @@
+<?php
+$de_host='localhost';
+$de_user='root';
+$de_puss="";
+$de_name='index';
+$de_port='3307';
+$de_con=mysqli_connect($de_host,
+                       $de_user,
+                        $de_puss,
+                          $de_name,
+                           $de_port);
+if(!$de_con){/
+    exit('error');
+}

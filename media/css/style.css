@@ -1,0 +1,109 @@
+body{
+margin:0px;
+padding:0px;
+}
+.header{
+height:200px;
+background:url(../img/fon.jpg);
+}
+.logotex{
+color:black;
+text-shadow:1px 1px 1px gold;
+float:right;
+padding:15px;
+margin-right:50px;
+}
+.logo{
+width:200px;
+height:150px;
+float:left;
+margin:30px;
+}
+.menu{
+display:flex;
+width:100%;
+text-align:center;
+margin:0 auto;
+flex-direction:row;
+
+}
+.menu a{
+flex:1;
+font-size:14px;
+padding:10px;
+color:white;
+background:black;
+text-decoration:none;
+border-right:1px solid white;
+}
+.menu a:hover{
+background:gold;
+color:black;
+}
+.col-md-8{
+text-align:center;
+background:url(../img/fon2.jpg);
+height:700px;
+}	
+.inf{
+text-align:justify;
+
+}	
+.reklama2{
+	position:relative;
+	width:300px;
+	height:400px;
+	right:11px;
+	top:100px;
+}	
+.pic1{
+	position:static;
+	float:right;
+	margin-right:50px;
+	margin-left:10px;
+	width:400px;
+	height:200px;
+}	
+.pic2{
+	position:static;
+	float:left;
+	margin-right:50px;
+	margin-left:10px;
+	width:250px;
+	height:200px;
+}	
+.col-md-2 {
+height:700px;
+background:#2FCBF4;
+}	
+.baner{
+height:200px;
+background:url(../img/fon.jpg);
+
+}
+.footer {
+	position: static; 
+    padding: 20px;
+    background:#DFDFDF;
+    color: black;
+    width: 100%;
+}
+@media screen and (max-width: 600px){
+	.menu{
+	flex-direction:column;
+}	
+	.logo{
+		display:none;
+	}	
+	.header{
+		height:100px;
+}
+}
+.form-group{
+	width: 300px;
+text-align:center;
+	margin-bottom: 10px;
+}
+.registr{
+	background:#DFDFDF;
+}
