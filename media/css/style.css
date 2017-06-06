@@ -100,10 +100,7 @@ background:url(../img/fon.jpg);
 }
 }
 .form-group{
-	width: 300px;
-text-align:center;
-	margin-bottom: 10px;
-}
-.registr{
-	background:#DFDFDF;
-}
+	 width: 300px;
+	 float:center;
+	 margin-bottom: 10px;
+ }

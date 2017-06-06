@@ -1,8 +1,15 @@
 <?php
-require_once('config/config.php');//Подключаем наш конфиг , где находятся наши переменные .
+require_once('config/config.php');
+require_once('config/conect.php');
+require_once('config/function.php');
+
 ?>
 <!doctype html>
-
+<?php
+echo '<pre>';
+    var_dump($users);
+    echo '</pre>';
+    ?>
 <html>
 	<head>
 	<meta charset="utf-8">

@@ -20,11 +20,10 @@ if($_POST){
 	}
 }
 ?>
-<form method='POST'>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="Email" name="Email"  class="form-control" id="exmapleInputEmail" required placeholder="Email">
-  </div>
+<form method='POST' >
+<div align="center">
+
+
       <div class="form-group">
           <label for="exampleInputName1">Name</label>
           <input type="text" name="Name"    class="form-control" id="exmapleInputName" required placeholder="Name">
@@ -38,13 +37,20 @@ if($_POST){
         <label for="exampleInputPassword1">Password again</label>
         <input type="password" name="pass_again"    class="form-control" id="exmapleInputPass_again" required placeholder="Password">
     </div>
+
+
     <div class="form-group">
-        <label for="exampleInputPassword1">About </label>
-        <input type="text " name="about"    class="form-control"  placeholder="About">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="Email" name="Email"  class="form-control" id="exmapleInputEmail" required placeholder="Email">
     </div>
 
-
+    <div class="form-group">
+        <label for="exampleInputPol">women / men</label>
+        <input type="radio"  name="women"  class="form-control" id="exmapleInputPol" required placeholder="Pol">
+        <input type="radio"  name="men"  class="form-control" id="exmapleInputPol" required placeholder="Pol">
+    </div>
     <button type="submit" class="btn btn-default">registr</button>
+</div>
 </form>
 
 <?php require_once('templates/bottom.php');?>
