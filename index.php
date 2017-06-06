@@ -22,9 +22,7 @@ echo"</pre>";*/
  <?=$result['body'];?>
 
 								</div>
-						</div>
-						</div>
-						</div>
+
 					
 
 <?php require_once('templates/bottom.php');?>

@@ -9,6 +9,6 @@ $de_con=mysqli_connect($de_host,
                         $de_puss,
                           $de_name,
                            $de_port);
-if(!$de_con){/
+if(!$de_con){
     exit('error');
 }

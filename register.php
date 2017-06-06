@@ -1,25 +1,46 @@
+
 <?php require_once('templates/top.php');?>
+<?php
+
+if($_POST){
+	$err=[];
+	$password=$_POST['password'];
+	$pass_again=$_POST['pass_again'];
+	if($password==$pass_again){
+		echo "on";
+	}
+	else{
+		echo "error";
+		$err[]="Не совпадает пароль";
+}
+	foreach($err as $one){
+		echo"<p style='color:red' class='error'>";
+		echo $one;
+		echo "</p>";
+	}
+}
+?>
 <form method='POST'>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" name="email" id="email" class="form-control"    placeholder="Email">
+    <input type="Email" name="Email"  class="form-control" id="exmapleInputEmail" required placeholder="Email">
   </div>
       <div class="form-group">
           <label for="exampleInputName1">Name</label>
-          <input type="text" name="name"  id="name"  class="form-control"  placeholder="Name">
+          <input type="text" name="Name"    class="form-control" id="exmapleInputName" required placeholder="Name">
       </div>
 
   <div class="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" name="pass"  id="pass"  class="form-control"  placeholder="Password">
+    <input type="Password" name="Pass"    class="form-control" id="exmapleInputPass"  required placeholder="Password">
   </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Password again</label>
-        <input type="password " name="pass_again"  id="pass_again"  class="form-control" placeholder="Password">
+        <input type="password" name="pass_again"    class="form-control" id="exmapleInputPass_again" required placeholder="Password">
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">About </label>
-        <input type="text " name="about"  id="about"  class="form-control"  placeholder="About">
+        <input type="text " name="about"    class="form-control"  placeholder="About">
     </div>
 
 

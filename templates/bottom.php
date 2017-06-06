@@ -1,4 +1,6 @@
-
+						</div>
+						</div>
+						</div>
 					  <div class="col-md-2">
 				     
 					   <a href=""><img src="media/img/reklama2.jpg" class="reklama2">
