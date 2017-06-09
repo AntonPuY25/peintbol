@@ -1,15 +1,13 @@
 <?php
+session_start();
+
 require_once('config/config.php');
-require_once('config/conect.php');
-require_once('config/function.php');
+
 
 ?>
 <!doctype html>
-<?php
-echo '<pre>';
-    var_dump($users);
-    echo '</pre>';
-    ?>
+
+
 <html>
 	<head>
 	<meta charset="utf-8">
@@ -36,6 +34,7 @@ echo '<pre>';
             
 			<img src="media/img/logo.png" class="logo">
 
+
 		</div>
 		<br style="clear:both"/>
 				<nav class="menu">
@@ -51,7 +50,19 @@ echo '<pre>';
 					   <a href="index.php?url=regulation" class="btn btn-default btn-block "  > Правила игры</a>
 					   <a href="index.php?url=Review" class="btn btn-default btn-block "  > Отзывы</a>
 					   <a href="index.php?url=Recruiting" class="btn btn-default btn-block "  > Набор в команду</a>
-
+                        <?php
+                        if(isset($_SESSION['user_id'])) {
+                            ?>
+                            <a href="home.php" class="btn btn-default btn-block ">Home</a>
+                            <a href="logout.php" class="btn btn-default btn-block">Logout</a>
+                            <?php
+                        }else{
+                            ?>
+                        <a href="login.php" class="btn btn-default btn-block ">login</a>
+                        <a href="register.php" class="btn btn-default btn-block ">register</a>
+                        <?php
+                        }
+                        ?>
 					</div>
 
 						<div class="col-md-8">

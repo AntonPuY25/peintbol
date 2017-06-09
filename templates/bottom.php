@@ -13,8 +13,6 @@ $adr=mysqli_query($de_con, $query);
 while($result=mysqli_fetch_array($adr)){
     echo "<a href='index.php?url=".$result['url']."'>";
     echo $result['name'];
-
-
         '<br/>';
 
 }

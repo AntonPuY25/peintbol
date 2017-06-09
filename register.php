@@ -1,25 +1,63 @@
-
-<?php require_once('templates/top.php');?>
+<?php
+require_once('templates/top.php');?>
 <?php
 
 if($_POST){
-	$err=[];
+
 	$password=$_POST['password'];
+	$login =$_POST['Name'];
+    $email =$_POST['email'];
 	$pass_again=$_POST['pass_again'];
 	if($password==$pass_again){
 		echo "on";
 	}
 	else{
-		echo "error";
-		$err[]="Не совпадает пароль";
+
+		$err[]="совпадает пароль";
 }
+$query ="SELECT * FROM users WHERE email='$email'";
+	$adr=mysqli_query($de_con,$query);
+	if(!$adr){
+	    exit($query);
+    }
+    if(mysqli_num_rows($adr)>0){
+	    $err[]='Такой емаил в базе существует';
+    }
 	foreach($err as $one){
 		echo"<p style='color:red' class='error'>";
 		echo $one;
 		echo "</p>";
 	}
-}
+
+            if (count($err)==0){
+	    $query= "INSERT INTO users VALUES(
+                                  NULL,
+                                 '$login',
+                                  '$password',
+                                  '$email', 
+                                  NOW(),
+                                  NOW(),
+                                  'unblock'
+                                  
+)";
+	    $in=mysqli_query($de_con,$query);
+	    if(!$in){
+	       //exit($query);//$queryиспользуется только для проверки кода !!
+        }else{
+            ?>
+
+            <script>
+            document.location.href='login.php';
+            </script>
+            <?php
+
+        }
+
+        }
+    }
+
 ?>
+
 <form method='POST' >
 <div align="center">
 
@@ -30,8 +68,8 @@ if($_POST){
       </div>
 
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="Password" name="Pass"    class="form-control" id="exmapleInputPass"  required placeholder="Password">
+    <label for="exampleInputpassword">Password</label>
+    <input type="Password" name="password"    class="form-control" id="exmapleInputpassword"  required placeholder="Password">
   </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Password again</label>
@@ -40,8 +78,8 @@ if($_POST){
 
 
     <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="Email" name="Email"  class="form-control" id="exmapleInputEmail" required placeholder="Email">
+        <label for="exampleInputemail">Email address</label>
+        <input type="email" name="email"  class="form-control" id="exmapleInputemail" required placeholder="email">
     </div>
 
     <div class="form-group">
