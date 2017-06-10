@@ -1,16 +1,16 @@
 <?php require_once('templates/top.php');
 
 if($_GET['url']){
-$url=$_GET['url'];
+$url=$_GET['url'];   $adr=mysqli_query($de_con,$query);
+    if (!$adr){
+        exit('error query');
+    }
+    $result=mysqli_fetch_array($adr);
 }else{
     $url='index';
 }
 $query="SELECT*FROM maintexts WHERE url='$url'";
-   $adr=mysqli_query($de_con,$query);
-if (!$adr){
-    exit('error query');
-}
-$result=mysqli_fetch_array($adr);
+
 /*
 echo"<pre>";
 print_r($result);

@@ -18,8 +18,7 @@ require_once('config/config.php');
 	 }else{
 
 		 echo"Пейнтбол";
-	 }?>
-	Пейнтбол</title>
+	 }?></title>
 	
 	<meta name="discription" content ="<?=(isset($desc))?$desc:"Добро пожаловать к нам";?>">
 	<meta name="keywords" content = "Пейнтбол  PuY краски лес команда">
